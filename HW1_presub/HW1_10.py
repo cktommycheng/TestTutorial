@@ -6,34 +6,15 @@ Created on Tue Sep 13 20:45:17 2016
 """
 
 #12 
-def lingo():
-    guesslst = []
-    word = list("fuzzy")
-
-    while guesslst != word:
-        new = []
-        guess = input("Enter word: ")
-        guesslst = list(guess)
-        for x in guesslst:
-            if x in word:
-                for y in word:
-                    if x == y:
-                        if word.index(y) == guesslst.index(x):
-                            if x not in new:
-                                new.append("[%s]" % x)
-                        else:
-                            if x not in new:
-                                new.append("(%s)" % x)
-            else:
-                if x not in new:
-                    new.append(x)
-        print("".join(new))
-    print("Congratulations you win! The word was %s" % "".join(word))
 
 
-def main():
-    print("Loading word list from file...")
-    print("Welcome to the game, Lingo!")
-    lingo()
-    
-lingo()
+word = list("tiger")
+stop = False
+
+print(word.index('i'))
+
+
+print('Welcome to Lingo!')
+guess = input('Enter a word:' )    
+guess = list(guess)
+print(guess)
