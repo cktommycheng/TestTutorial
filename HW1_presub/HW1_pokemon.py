@@ -2,9 +2,15 @@
 """
 Created on Sat Sep 10 02:53:21 2016
 
-@author: TCheng
+@author: TommyCheng
 """
-#Pokemon
+'''
+This program generates the/a sequence with the highest possible
+number of Pokemon names where the subsequent name starts with
+the final letter of the preceding name from a givenlist. No Pokemon name is to be
+repeated. 
+
+'''
 
 
 
@@ -13,8 +19,8 @@ pokeList = ["audino","bagon","baltoy","banette","bidoof", "braviary", "bronzor",
 "porygonz", "registeel", "relicanth", "remoraid", "rufflet", "sableye", "scolipede", "scrafty", "seaking",
 "sealeo", "silcoon", "simisear", "snivy", "snorlax", "spoink", "starly", "tirtouga", "trapinch", "treecko","tyrogue", "vigoroth", "vulpix", "wailord", "wartortle","whismur","wingull" ,"yamask"]
 
-finalList = []
-# this is the final list
+finalList = []  # this is the final list
+
 
 def solve(newList):
 	global finalList,pokeList
@@ -23,7 +29,7 @@ def solve(newList):
 	for name in pokeList:		
 		if((len(newList) == 0) or (name not in newList and (name[0] == newList[-1][-1]))):
 			# this condition checks if list is empty or first letter of name mathces last letter of last element of list
-			flag =1
+			flag = 1
 			newList.append(name)
 			# append the name and recurs
 			solve(newList)
@@ -39,8 +45,6 @@ def solve(newList):
 			finalList = list(newList)
 
 def main():
-	global finalList
-
 	solve([])
 
 	print(len(finalList))
@@ -49,7 +53,6 @@ def main():
 		print(name)
 
 
-#if __name__ == '__main__':
 main();
 
 
