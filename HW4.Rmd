@@ -1,0 +1,36 @@
+---
+title: "HW4"
+author: "Tommy Cheng"
+date: "October 8, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+Problem1a)
+
+```{r}
+a <- (1:20)
+print(a)
+```
+
+Problem1b)
+```{r pressure, echo=FALSE}
+b <- (20:1)
+```
+
+Problem1c)
+```{r pressure, echo=FALSE}
+f <- a + c(19:1)
+f
+```
+
+Problem1d)
+```{r}
+tmp <- c(4, 6, 3)
+```
+
+Problem1e)
